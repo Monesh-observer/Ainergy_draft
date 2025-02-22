@@ -111,31 +111,46 @@ dafldbhl_field_ranges = {
     "da_fld_bhl_pntrt_dir_2": (229, 242),
     "da_filler": (242, 260)
 }
-
 daroot_field_ranges = {
-    "record_id": (0, 2),
-    "da_permit": (2, 9),
-    "da_county_code": (9, 12),
-    "da_lease_name": (12, 44),
-    "da_district": (44, 46),
-    "da_operator_number": (46, 52),
-    "da_converted_date": (55, 63),
-    "da_date_app_received": (59, 67),
-    "da_operator_name": (67, 99),
-    "da_status_of_app_flag": (100, 101),
-    "da_problem_flags": (102, 112),
-    "da_issue_date": (120, 126),
-    "da_withdrawn_date": (128, 134),
-    "da_walkthrough_flag": (136, 137),
-    "da_other_problem_text": (137, 157),
-    "da_well_number": (157, 163),
-    "da_built_from_old_master_flag": (163, 164),
-    "da_status_renumbered_to": (164, 173),
-    "da_status_renumbered_from": (173, 182),
-    "da_application_returned_flag": (182, 183),
-    "da_ecap_filing_flag": (183, 184),
-    "filler": (184, 508)
+    "record_id": (0, 2),  # RRC-TAPE-RECORD-ID
+    "da_status_number": (2, 9),  # DA-STATUS-NUMBER
+    "da_status_sequence_number": (9, 11),  # DA-STATUS-SEQUENCE-NUMBER
+    "da_county_code": (11, 14),  # DA-COUNTY-CODE
+    "da_lease_name": (14, 46),  # DA-LEASE-NAME
+    "da_district": (46, 48),  # DA-DISTRICT
+    "da_operator_number": (48, 54),  # DA-OPERATOR-NUMBER
+    "da_converted_date": (54, 58),  # DA-CONVERTED-DATE (COMP format, may need special handling)
+    "da_app_rcvd_century": (58, 60),  # DA-APP-RCVD-CENTURY
+    "da_app_rcvd_year": (60, 62),  # DA-APP-RCVD-YEAR
+    "da_app_rcvd_month": (62, 64),  # DA-APP-RCVD-MONTH
+    "da_app_rcvd_day": (64, 66),  # DA-APP-RCVD-DAY
+    "da_operator_name": (66, 98),  # DA-OPERATOR-NAME
+    "filler": (98, 99),  # FILLER
+    "da_hb1407_problem_flag": (99, 100),  # DA-HB1407-PROBLEM-FLAG
+    "da_status_of_app_flag": (100, 101),  # DA-STATUS-OF-APP-FLAG
+    "da_problem_flags": (101, 113),  # DA-PROBLEM-FLAGS (various problem flags)
+    "da_permit": (113, 120),  # DA-PERMIT
+    "da_issue_century": (120, 122),  # DA-ISSUE-CENTURY
+    "da_issue_year": (122, 124),  # DA-ISSUE-YEAR
+    "da_issue_month": (124, 126),  # DA-ISSUE-MONTH
+    "da_issue_day": (126, 128),  # DA-ISSUE-DAY
+    "da_withdrawn_century": (128, 130),  # DA-WITHDRAWN-CENTURY
+    "da_withdrawn_year": (130, 132),  # DA-WITHDRAWN-YEAR
+    "da_withdrawn_month": (132, 134),  # DA-WITHDRAWN-MONTH
+    "da_withdrawn_day": (134, 136),  # DA-WITHDRAWN-DAY
+    "da_walkthrough_flag": (136, 137),  # DA-WALKTHROUGH-FLAG
+    "da_other_problem_text": (137, 157),  # DA-OTHER-PROBLEM-TEXT
+    "da_well_number": (157, 163),  # DA-WELL-NUMBER
+    "da_built_from_old_master_flag": (163, 164),  # DA-BUILT-FROM-OLD-MASTER-FLAG
+    "da_status_renumbered_to": (164, 173),  # DA-STATUS-RENUMBERED-TO
+    "da_status_renumbered_from": (173, 182),  # DA-STATUS-RENUMBERED-FROM
+    "da_application_returned_flag": (182, 183),  # DA-APPLICATION-RETURNED-FLAG
+    "da_ecap_filing_flag": (183, 184),  # DA-ECAP-FILING-FLAG
+    "filler_2": (184, 187),  # FILLER
+    "rrc_tape_filler": (187, 512)  # RRC-TAPE-FILLER
 }
+
+
 
 dadafield_field_ranges = {
     "record_id": (0, 2),
